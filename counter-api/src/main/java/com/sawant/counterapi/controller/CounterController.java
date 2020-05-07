@@ -31,5 +31,4 @@ public class CounterController {
 		countMap.put("counts", cs.getSearchCount(searchList));
 		return countMap;
 	}
-	
 }
