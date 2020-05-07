@@ -1,5 +1,6 @@
 package com.sawant.counterapi.controller;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +24,12 @@ public class CounterController {
 		return "welcome";
 	}
 	
-	@PostMapping(path = "/search")
-	public Map<String,Long> getSearchCount(@RequestBody List<String> searchText) {
-		return cs.getSearchCount(searchText);
+	@PostMapping(path = "/search", consumes = "application/json", produces = "application/json")
+	public Map<String,Object> getSearchCount(@RequestBody Map<String, Object> payload) {
+		Map<String,Object> countMap=new HashMap<>();
+		List<String> searchList=(List<String>) payload.get("searchText");
+		countMap.put("counts", cs.getSearchCount(searchList));
+		return countMap;
 	}
 	
 }
