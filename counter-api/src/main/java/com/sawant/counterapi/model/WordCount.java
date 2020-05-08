@@ -1,6 +1,6 @@
 package com.sawant.counterapi.model;
 
-public class WordCount {
+public class WordCount implements Comparable<WordCount> {
 	
 	private String word;
 	private Long count;
@@ -9,6 +9,7 @@ public class WordCount {
 		this.word=str;
 		this.count=count2;
 	}
+	
 	public String getWord() {
 		return word;
 	}
@@ -20,6 +21,11 @@ public class WordCount {
 	}
 	public void setCount(Long count) {
 		this.count = count;
+	}
+
+	@Override
+	public int compareTo(WordCount newCount) {
+		return count.compareTo(newCount.getCount());
 	}
 
 }
