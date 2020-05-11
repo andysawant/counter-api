@@ -1,5 +1,7 @@
 To Run the application go to the folder /counter-api/counter-api" ad run the command "gradle bootRun"
 
+
+PROBLEM STATEMENT
 Implement RESTful Services, which provide the solution of the following tasks, given the sample paragraphs. Also protect the services with Spring Security
 
 Task 1: Search the following texts, which will return the counts respectively.
