@@ -26,8 +26,13 @@ Sample Request
 > curl http://localhost:8080/counter-api/top/20 -H"Authorization: Basic b3B0dXM6Y2FuZGlkYXRlcw==" - H”Accept: text/csv”
 
 As an example of the result if I put /top/5:
+
 text1|100
+
 text2|91
+
 text3|80
+
 text4|70
+
 text5|60
