@@ -1,3 +1,5 @@
+To Run the application go to the folder /counter-api/counter-api" ad run the command "gradle bootRun"
+
 Implement RESTful Services, which provide the solution of the following tasks, given the sample paragraphs. Also protect the services with Spring Security
 
 Task 1: Search the following texts, which will return the counts respectively.
@@ -5,7 +7,7 @@ Task 1: Search the following texts, which will return the counts respectively.
 User should be able to execute the following curl command and returning results in the json format:
 
 Sample Request
-> curl http://host/counter-api/search -H"Authorization: Basic b3B0dXM6Y2FuZGlkYXRlcw==" - d'{"searchText":["Duis", "Sed", "Donec", "Augue", "Pellentesque", "123"]}' -H"Content- Type: application/json" –X POST
+> curl http://localhost:8080/counter-api/search -H"Authorization: Basic b3B0dXM6Y2FuZGlkYXRlcw==" - d'{"searchText":["Duis", "Sed", "Donec", "Augue", "Pellentesque", "123"]}' -H"Content- Type: application/json" –X POST
 
 Result in JSON:
 > {"counts": [{"Duis": 11}, {"Sed": 16}, {"Donec": 8}, {"Augue": 7}, {"Pellentesque": 6},
@@ -18,7 +20,7 @@ Task 2: Provide the top 20 (as Path Variable) Texts, which has the highest count
 As a user, I will be able to execute the following curl command and expecting result in csv format. I will be able to put 10, 20, 30 or 5 as the top listing.
 
 Sample Request
-> curl http://host/counter-api/top/20 -H"Authorization: Basic b3B0dXM6Y2FuZGlkYXRlcw==" - H”Accept: text/csv”
+> curl http://localhost:8080/counter-api/top/20 -H"Authorization: Basic b3B0dXM6Y2FuZGlkYXRlcw==" - H”Accept: text/csv”
 
 As an example of the result if I put /top/5:
 text1|100
